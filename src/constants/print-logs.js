@@ -4,7 +4,8 @@ export const LOGS_TYPE = {
     workingDirectory: 'workingDirectory',
     invalidInput: 'invalidInput',
     operationFailed: 'operationFailed',
-    fileTable: 'fileTable'
+    fileTable: 'fileTable',
+    text: 'text',
 };
 
 export const LOGS_TITLE = {

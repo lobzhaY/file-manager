@@ -24,6 +24,10 @@ export const printLogs = (logsType, payload) => {
             break;
         case LOGS_TYPE.fileTable: 
             console.table(payload);
+            break;
+        case LOGS_TYPE.text: 
+            console.log(payload);
+            break;
         default:
             break;
     }

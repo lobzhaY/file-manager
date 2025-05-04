@@ -3,21 +3,16 @@ import fs from "node:fs/promises";
 import { printLogs, getCurrentPath } from "../../utils/index.js";
 import { LOGS_TYPE } from "../../constants/index.js";
 
-export const cd = async ([inputPath]) => {
-  if (!inputPath) {
+export const add = async ([fileNewName]) => {
+  if (!fileNewName) {
     printLogs(LOGS_TYPE.invalidInput);
     return;
   }
 
-  const redirectPath = path.isAbsolute(inputPath)
-    ? path.normalize(inputPath)
-    : path.resolve(getCurrentPath(), inputPath);
+  const newPath = path.resolve(getCurrentPath(), fileNewName);
 
   try {
-    const status = await fs.stat(redirectPath);
-    if (status.isDirectory()) {
-      process.chdir(redirectPath);
-    }
+    await fs.appendFile(newPath, "");
   } catch (error) {
     printLogs(LOGS_TYPE.operationFailed);
   }
