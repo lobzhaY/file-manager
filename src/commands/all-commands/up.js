@@ -1,9 +1,9 @@
 import path from 'path';
-import { printLogs, getWorkingDirectory } from '../../utils/index.js';
+import { printLogs, getCurrentPath } from '../../utils/index.js';
 import { LOGS_TYPE } from '../../constants/index.js';
 
 export const up = () => {
-    const current = getWorkingDirectory();
+    const current = getCurrentPath();
     const root = path.parse(current).root;
     const parent = path.dirname(current);
 
@@ -13,7 +13,6 @@ export const up = () => {
 
     try {
         process.chdir(parent);       
-       // setCurrentDir(process.cwd()); 
     } catch {
         printLogs(LOGS_TYPE.operationFailed);
     }

@@ -1,10 +1,10 @@
 import { LOGS_TYPE, LOGS_TITLE } from '../constants/index.js';
 import { getUsername } from './get-username.js';
-import { getWorkingDirectory } from './get-working-directory.js';
+import { getCurrentPath } from './get-current-path.js';
 
-export const printLogs = (logsType, payload) => {
+export const printLogs = async (logsType, payload) => {
     const userName = getUsername();
-    const workingDirectory = getWorkingDirectory();
+    const workingDirectory = getCurrentPath();
 
     switch (logsType) {
         case LOGS_TYPE.welcome: 

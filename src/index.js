@@ -23,9 +23,10 @@ const rl = readline.createInterface({
       exitProgram();
       return;
     }
-  
+
     await navigationCommands(input);
-    printLogs(LOGS_TYPE.workingDirectory);
+
+    await printLogs(LOGS_TYPE.workingDirectory);
     rl.prompt();
   });
 

@@ -9,4 +9,8 @@ export const COMMANDS_NAME = {
     cp: 'cp',
     mv: 'mv',
     rm: 'rm',
+    hash: 'hash',
+    compress: 'compress',
+    decompress: 'decompress',
+    os: 'os',
 }
