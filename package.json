@@ -1,0 +1,22 @@
+{
+  "name": "file-manager",
+  "version": "1.0.0",
+  "description": "File manager CLI tool",
+  "main": "index.js",
+  "scripts": {
+     "start": "node src/index.js",
+     "start:example": "node ./src/index.js -- --username=yulia"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lobzhaY/file-manager.git"
+  },
+  "keywords": ["cli", "file-manager", "nodejs"],
+  "author": "yulia.lobzha@gmail.com",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/lobzhaY/file-manager/issues"
+  },
+  "homepage": "https://github.com/lobzhaY/file-manager#readme"
+}
